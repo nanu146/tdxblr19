@@ -13,6 +13,7 @@
   <script type="text/javascript" src="{% static "js/lightning.out.js" %}"> </script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
   <script type="text/javascript">
+    var _lightningReady = false;
     function setupLightning(callback) 
     {
 	    var appName = "c:HelloBengaluru";
@@ -35,11 +36,13 @@
               }, url, Cookies.get("access_token"));
       }
     }
-  function createChatterFeed(type, subjectId) 
+  function createChatterFeed() 
   {
       setupLightning(function() {
-      $Lightning.createComponent("forceChatter:feed", {type: type, subjectId: subjectId}, "app"); 
+      $Lightning.createComponent("c:HelloWorld", {}, "app"); 
       });
   }
+
+  createChatterFeed();
   </script>
 </html>
