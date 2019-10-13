@@ -1,0 +1,1 @@
+web: gunicorn TDXBLR19.wsgi
