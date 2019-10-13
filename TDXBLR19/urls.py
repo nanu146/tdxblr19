@@ -20,4 +20,5 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('callback', views.callback),
+    path('demo', views.demo),
 ]
