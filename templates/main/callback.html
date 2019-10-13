@@ -1,3 +1,4 @@
+{% load static %}
 <html>
   <head>
     <title>Salesforce Callback</title>
@@ -5,4 +6,18 @@
   <body>
     HEllo THis is callback
   </body>
+  <script type="text/javascript" src="{% static "js/lightning.out.js" %}"/>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+  <script type="text/javascript">
+    function setParams() {
+      param_string = decodeURIComponent(window.location.hash.substr(1)).split(
+        "&"
+      );
+
+      param_string.forEach(function(d) {
+        cookie_params = d.split("=");
+        Cookies.set(cookie_params[0], cookie_params[1]);
+      });
+    }
+  </script>
 </html>
