@@ -71,11 +71,35 @@
         font-size: 50px;
         margin-top: 250px;
       }
+
+      .loader {
+        margin-top: 250px;
+        border: 5px solid #b3b3b3;
+        border-radius: 50%;
+        border-top: 5px solid #6e6e6e;
+        width: 25px;
+        height: 25px;
+        -webkit-animation: spin 1s linear infinite; /* Safari */
+        animation: spin 1s linear infinite;
+      }
+
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
     </style>
   </head>
   <body>
     <div class="overlay">
-      <p> Loading your Admin Portal</p>
+       
+      <p> Loading your Admin Portal <img src="{% static 'images/loading.gif' %}" height="35" width="35"> </p>
     </div>
       <div class="header">
           <div class="menuBarHold">
@@ -140,9 +164,8 @@
 
 
   createChatterFeed();
-  
+
   window.onload = function(){
-    alert("hello")
     $(".overlay").delay(3000).fadeOut(2000);
   }
 
