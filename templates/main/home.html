@@ -1,14 +1,129 @@
+{% load static %}
 <html>
   <head>
     <title>EA Everywhere demo</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <script>
       url = "https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token"+'&client_id=' + encodeURIComponent("3MVG9G9pzCUSkzZtGdWpEJfc_dEw84hfGMl1XMvWzc42lIolmwMJf0FMjMKUqVY8wPF.czWE0uk08P91F0sDn") +'&redirect_uri=' + encodeURIComponent("https://tdxblr19.herokuapp.com/callback");
     </script>
+    <style type="text/css">
+      body{
+        padding: 0px;
+        margin: 0px;
+        font-family: 'PT Sans', sans-serif;
+      }
+      .header{
+        top: 0px;
+        width: 100%;
+      }
+      .menuBarHold{
+        height: 70px;
+        background-color: black;
+      }
+      .logo{
+        background-repeat: no-repeat;
+        width: 600px;
+        height: 50px;
+        padding: 10px;
+        margin-left: 20px;
+        float: left;
+      }
+      .login a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 100;
+      }
+
+      .login{
+        margin-top: 25px;
+        margin-right: 35px;
+        float: right;
+      }
+
+      .content{
+        width:100%;
+        height: 800px;
+        background-image: url("{% static 'images/puppy.jpg' %}");
+        background-image:  url("{% static 'images/puppy.jpg' %}"), linear-gradient(to bottom,rgba(0,0,0, 0),rgba(0,0,0, 100)); /* W3C */
+        /* https://www.flickr.com/photos/wallboat/23503731148/ */
+        background-repeat: no-repeat;
+        background-position: center center; 
+        background-size:cover;
+      }
+
+      .footer{
+        width:100%;
+        height: 10px;
+        padding: 50px 0px;
+        background-color: #262626;
+        color: whitesmoke;
+      }
+
+      .demoNotice{
+        margin-left: 50px;
+      }
+      .callToAction{
+        
+        background-color: rgba(0,0,0, .5);
+        width:600px;
+        height: inherit;
+        position: absolute;
+      }
+      .callToActionContent{
+        width: 500px;
+        position: relative;
+        margin-left: 50px;
+        top:75px;
+        color:#e8e8e8;
+      }
+      .callToActionContent h1{
+        font-size: 60px;
+        text-align: center;
+      }
+
+      .callToActionContent p{
+        font-size: 20px;
+        text-align: center;
+      }
+
+    </style>
   </head>
   <body>
-    Hello
-    <a href="https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=3MVG9G9pzCUSkzZtGdWpEJfc_dEw84hfGMl1XMvWzc42lIolmwMJf0FMjMKUqVY8wPF.czWE0uk08P91F0sDn&redirect_uri=https%3A%2F%2Ftdxblr19.herokuapp.com%2Fcallback">
+    <div class="header">
+      <div class="menuBarHold">
+        <div class="logo">
+          <img src="{% static 'images/logo_white.png' %}" height="50" width="300">
+        </div>
+
+        <div class="login" >
+          <a href="https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=3MVG9G9pzCUSkzZtGdWpEJfc_dEw84hfGMl1XMvWzc42lIolmwMJf0FMjMKUqVY8wPF.czWE0uk08P91F0sDn&redirect_uri=https%3A%2F%2Ftdxblr19.herokuapp.com%2Fcallback">
+            LOGIN
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="callToAction">
+        <div class="callToActionContent">
+          <h1>Looking for a pet?</h1>
+          <p>
+            Visit our shelter <u>here</u>.
+          </p>
+          <br>
+          <br>
+          <p> Found a stray? help us find a home. <u>Call</u> us now. </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="demoNotice">
+          For demo at TrailheadX Bengaluru 2019
+      </div>
+      
+    </div>
+    <!--<a href="https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=3MVG9G9pzCUSkzZtGdWpEJfc_dEw84hfGMl1XMvWzc42lIolmwMJf0FMjMKUqVY8wPF.czWE0uk08P91F0sDn&redirect_uri=https%3A%2F%2Ftdxblr19.herokuapp.com%2Fcallback">
       Authenticate
-    </a>
+    </a>-->
   </body>
 </html>

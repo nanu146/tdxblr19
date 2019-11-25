@@ -1,13 +1,69 @@
 {% load static %}
 <html>
   <head>
-    <title>Salesforce Callback</title>
+    <title>Admin Console</title>
+    <style type="text/css">
+      body{
+        padding: 0px;
+        margin: 0px;
+        font-family: 'PT Sans', sans-serif;
+      }
+      .header{
+        top: 0px;
+        width: 100%;
+        box-shadow: 0px 0px 8px #888888;
+      }
+      .menuBarHold{
+        height: 70px;
+        background-color: #ededed;
+      }
+      .logo{
+        background-repeat: no-repeat;
+        width: 600px;
+        height: 50px;
+        padding: 10px;
+        margin-left: 20px;
+        float: left;
+      }
+      .login a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: 100;
+      }
+
+      .login{
+        margin-top: 25px;
+        margin-right: 35px;
+        float: right;
+      }
+
+    </style>
   </head>
   <body>
-    Lightning Componenet Page:
-    <div id="app">
+      <div class="header">
+          <div class="menuBarHold">
+            <div class="logo">
+              <img src="{% static 'images/logo.png' %}" height="50" width="300">
+            </div>
+    
+            <div class="login" >
+              <a href="https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=3MVG9G9pzCUSkzZtGdWpEJfc_dEw84hfGMl1XMvWzc42lIolmwMJf0FMjMKUqVY8wPF.czWE0uk08P91F0sDn&redirect_uri=https%3A%2F%2Ftdxblr19.herokuapp.com%2Fcallback">
+                LOGOUT
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+            Lightning Componenet Page:
+            <div id="app">
+        
+            </div>
+        </div>
+        <div class="footer">
+    
+        </div>
 
-    </div>
     
   </body>
   <script type="text/javascript" src="https://tdxblr19-dev-ed.lightning.force.com/lightning/lightning.out.js"> </script>
