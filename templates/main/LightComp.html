@@ -17,13 +17,26 @@
         height: 70px;
         background-color: #ededed;
       }
-      .logo{
+      .portal{
         background-repeat: no-repeat;
         width: 600px;
         height: 50px;
-        padding: 10px;
-        margin-left: 20px;
+        padding: 0px 10px 10px 10px;
+        margin-left: 40px;
         float: left;
+      }
+
+      .logo{
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        margin-right: 20px;
+        float: right;
+      }
+
+      .portal p{
+        font-size: 20px;
       }
       .login a{
         text-decoration: none;
@@ -43,15 +56,18 @@
   <body>
       <div class="header">
           <div class="menuBarHold">
-            <div class="logo">
-              <img src="{% static 'images/logo.png' %}" height="50" width="300">
+            <div class="portal">
+              <p>ADMIN PORTAL</p>
             </div>
-    
-            <div class="login" >
+            
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" height="50" width="300">
+            </div>
+            <!--<div class="login" >
               <a href="https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=3MVG9G9pzCUSkzZtGdWpEJfc_dEw84hfGMl1XMvWzc42lIolmwMJf0FMjMKUqVY8wPF.czWE0uk08P91F0sDn&redirect_uri=https%3A%2F%2Ftdxblr19.herokuapp.com%2Fcallback">
                 LOGOUT
               </a>
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="content">
